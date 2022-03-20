@@ -1,0 +1,83 @@
+.dinos {
+    button {
+        background: #FFA035;
+        border: 6px solid #D0410A;
+        box-shadow: 0px 1px 0px #FFFFFF, 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 15px 46px;
+        display: inline-block;
+        text-align: center;
+        font-size: 48px;
+        font-family: 'Dinosaur';
+        color: #fff;
+        -webkit-text-stroke: 4px #D0410A;
+        cursor: pointer;
+    }
+}
+
+
+.element-box-inner {
+    button {
+        background-color: $background-color-button;
+        border:  2px solid #5142FC;
+        border-radius: 40px;
+        padding: 12px 35px 12px 32px;
+        display: inline-block;
+        text-align: center;
+        font-size: 48px;
+        font-family: $font;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+}
+
+.connect-box {
+    button {
+        padding: 12px 35px 12px 32px;
+        background: transparent none repeat scroll 0 0;
+        border:  2px solid #5142FC;
+        border-radius: 40px;
+        font-family: 'Baloo Da 2', 'cursive';
+        color: #fff;
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+    }
+    &.disconnected {
+      button {
+        position: relative;
+        padding-left: 50px;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 3px solid $white;
+          background-color: #D0410A;
+        }
+      }
+    }
+}
+
+
+button.highlight {
+    background-color: #FFA035;
+    border: 5px solid #D0410A;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 15px;
+    font-family: $font;
+    color: white;
+    overflow: hidden;
+}
