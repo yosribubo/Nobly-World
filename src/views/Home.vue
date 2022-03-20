@@ -4,23 +4,17 @@
     <WalletModal v-show="isModalOpen" />
 <transition name="fade" mode="out-in">
     <section>
-        <navbar />
+         <navbar />
         <div class="banner">
             <div class="container">
-                <div class="row justify-content-center">                  
+                <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="banner-content">
-                          <div class="shape item-w-16"></div>
-                          <div class="shape item-w-22"></div>
-                          <div class="shape item-w-32"></div>
-                          <div class="shape item-w-48"></div>
-                          <div class="shape style2 item-w-51"></div>
-                          <div class="shape style2 item-w-51 position2"></div>
-                            <div class="content-top" style="z-index: 2;">
+                            <div class="content-top">
                                 <img src="../assets/image/defi-dinos.png" class="img-fluid logo"/>
                                 <img src="../assets/image/unique-dinosaur-nfts.png" class="img-fluid tag"/>
                             </div>
-                            <div class="element" style="z-index: 2;">
+                            <div class="element">
                                 <div class="element-image">
                                     <img src="@/assets/image/dinos.gif" alt="">
                                 </div>
@@ -94,7 +88,7 @@ export default {
     $route: {
       immediate: true,
       handler (to, from) {
-        document.title = to.meta.title || 'Nobly World'
+        document.title = to.meta.title || 'DeFi Dinos'
       }
     }
   },
@@ -172,10 +166,6 @@ export default {
     text-shadow: 0px 3px 1px #000!important;
   }
 
-  .element-image {
-    margin-bottom: 16px;
-  }
-
   .element-image img {
     border: 10px solid #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -183,7 +173,7 @@ export default {
   }
 
   .banner {
-    // background-image: url('../assets/image/bg-1.jpg');
+    background-image: url('../assets/image/bg.svg');
     background-position: inherit!important;
   }
 
@@ -220,110 +210,4 @@ export default {
   opacity: 0
 }
 
-.shape{
-    border-radius: 50%;
-    z-index: 1;
-    position: absolute;
-    background: linear-gradient(
-    216.56deg,#E250E5 5.32%,#4B50E6 94.32%);
-}
-
-.shape.style2 {
-  background: none;
-  border: 2px solid #E250E5;
-}
-
-.shape.item-w-16 {
-    top: 17.8%;
-    right: 51.8%;
-    width: 17px;
-    height: 17px;
-    animation: move5 10s infinite linear;
-}
-
-.shape.item-w-22 {
-    top: 73.3%;
-    left: 30.6%;
-    width: 22px;
-    height: 22px;
-    animation: move4 10s infinite linear;
-}
-
-.shape.item-w-32 {
-    top: 68.7%;
-    right: 26.1%;
-    width: 32px;
-    height: 32px;
-    animation: move4 10s infinite linear;
-}
-
-.shape.item-w-48 {
-    top: 50.8%;
-    right: 47.7%;
-    width: 48px;
-    height: 48px;
-    animation: move3 10s infinite linear;
-}
-
-.shape.item-w-51 {
-    top: 15.5%;
-    right: 33.4%;
-    width: 51px;
-    height: 51px;
-    animation: move3 10s infinite linear;
-}
-
-.shape.item-w-51.position2 {
-    top: 33.8%;
-    left: 29.8%;
-}
-
-@keyframes move3 {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-  50% {
-    -webkit-transform: translate(30px);
-    transform: translate(30px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-}
-@keyframes move4 {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-  50% {
-    -webkit-transform: translate(-30px);
-    transform: translate(-30px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-}
-@keyframes move5 {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .shape {
-    display: none !important;
-  }
-}
 </style>

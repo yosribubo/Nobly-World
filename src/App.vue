@@ -5,7 +5,6 @@
 </template>
 
 <style lang="scss">
-  @import "~bootstrap/scss/bootstrap.scss";
   @import "~bootstrap/scss/bootstrap-grid.scss";
   @import "./assets/scss/main.scss";
 
@@ -20,7 +19,7 @@
   }
 
   body {
-    background: $--primary-background-color;
+    background:#131701;
   }
 
   .highlight {

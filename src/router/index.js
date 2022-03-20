@@ -14,14 +14,14 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    meta: { title: 'Nobly World', transition: 'fade-in-up' }
+    meta: { title: 'DeFi Dinos', transition: 'fade-in-up' }
   },
   {
     path: '/details',
     name: 'details',
     component: Details,
     meta: {
-      title: 'Nobly World',
+      title: 'DeFi Dinos',
       transition: 'fade-in-up'
     }
   },
@@ -30,7 +30,7 @@ const routes = [
     name: 'coming-soon',
     component: ComingSoon,
     meta: {
-      title: 'Nobly World',
+      title: 'DeFi Dinos',
       transition: 'fade-in-up'
     }
   },
@@ -39,7 +39,7 @@ const routes = [
     name: 'dino-modal',
     component: DinoModal,
     meta: {
-      title: 'Nobly World',
+      title: 'DeFi Dinos',
       transition: 'fade-in-up'
     }
   },
@@ -48,7 +48,7 @@ const routes = [
     name: 'my-dinos',
     component: MyDinos,
     meta: {
-      title: 'Nobly World',
+      title: 'DeFi Dinos',
       transition: 'fade-in-up'
     }
   },
@@ -57,7 +57,7 @@ const routes = [
     name: 'market',
     component: Market,
     meta: {
-      title: 'Nobly World',
+      title: 'DeFi Dinos',
       transition: 'fade-in-up'
     }
   }

@@ -52,7 +52,7 @@
                 <div class="index-header">
                     <h3>DINO POINTS INDEX</h3>
                     <p>
-                       Nobly World use a point-based system to determine tiers. The more points your Dino has, the closer they are to Legendary. There are 5 traits with a maximum of 5 points per trait, making the range of points 5 to 25.
+                       DeFi Dinos use a point-based system to determine tiers. The more points your Dino has, the closer they are to Legendary. There are 5 traits with a maximum of 5 points per trait, making the range of points 5 to 25.
                     </p>
                     <p>
                        There’s also a few totally unique Mythical Dinos mixed in. You'll know immediately if you get one.

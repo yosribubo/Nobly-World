@@ -1,33 +1,41 @@
 <template>
-  <div id="marketplace">
+  <div>
     <WalletModal v-show="isModalOpen" />
     <navbar />
     <section>
         <div class="index dinos market-section">
             <div class="container">
                 <div class="index-header market-header">
-                    <h3>MarketPlace</h3>
+                    <h3>Dino Market</h3>
                 </div>
                 <div class="col-md-12">
                   <div class="market-bg">
-                    <div class="market-filters">
-                        <div class="market-filter">
-                            <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'sortBy','sort')" :config="sortBy"></vue-dropdown>
-                        </div>
-                        <div class="market-filter">
-                            <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Body','trait')" :config="Body"></vue-dropdown>
-                        </div>
-                        <div class="market-filter">
-                            <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Head','trait')" :config="Head"></vue-dropdown>
-                        </div>
-                        <div class="market-filter">
-                            <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Eyes','trait')" :config="Eyes"></vue-dropdown>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
+                  <div class="market-filters">
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'sortBy','sort')" :config="sortBy"></vue-dropdown>
+                      </div>
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Body','trait')" :config="Body"></vue-dropdown>
+                      </div>
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Head','trait')" :config="Head"></vue-dropdown>
+                      </div>
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Eyes','trait')" :config="Eyes"></vue-dropdown>
+                      </div>
                   </div>
+                  <div class="market-filters">
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Color','trait')" :config="Color"></vue-dropdown>
+                      </div>
+                      <div class="market-filter">
+                          <vue-dropdown @setSelectedOption="setNewSelectedOption($event,'Mouth','trait')" :config="Mouth"></vue-dropdown>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
-                <dino-card :market="false" />
+                </div>
+                <dino-card :market="true" />
             </div>
         </div>
     </section>
@@ -82,13 +90,118 @@ export default {
       Body: {
         options: [
           {
-            value: 'test'
+            value: 'Plague Doctor'
           },
           {
-            value: 'test'
+            value: 'Jean Shirt'
           },
           {
-            value: 'test'
+            value: 'Pirate'
+          },
+          {
+            value: 'Sweater'
+          },
+          {
+            value: 'Turtleneck and Chain'
+          },
+          {
+            value: 'Butcher'
+          },
+          {
+            value: 'Soccer Player'
+          },
+          {
+            value: 'Red Jumpsuit'
+          },
+          {
+            value: 'Sensei'
+          },
+          {
+            value: 'Gown'
+          },
+          {
+            value: 'Samurai Armor'
+          },
+          {
+            value: 'Santa Suit'
+          },
+          {
+            value: 'Scrubs'
+          },
+          {
+            value: 'Naked'
+          },
+          {
+            value: 'Jersey'
+          },
+          {
+            value: 'Librarian'
+          },
+          {
+            value: 'Lone Wolf'
+          },
+          {
+            value: 'Vice'
+          },
+          {
+            value: 'Devil Wings'
+          },
+          {
+            value: 'Trees'
+          },
+          {
+            value: 'Toga'
+          },
+          {
+            value: 'Lumberjack'
+          },
+          {
+            value: 'Angel Wings'
+          },
+          {
+            value: 'Clown Suit'
+          },
+          {
+            value: 'Fighter Pilot'
+          },
+          {
+            value: 'Turtleneck'
+          },
+          {
+            value: 'Sailor'
+          },
+          {
+            value: 'Royal Mantle'
+          },
+          {
+            value: 'Inner Tube'
+          },
+          {
+            value: 'Suit and tie'
+          },
+          {
+            value: 'Spartan Armor'
+          },
+          {
+            value: 'Ninja Uniform'
+          },
+          {
+            value: 'Tie Dye'
+          },
+          {
+            value: 'Shark Costume'
+          },
+          {
+            value: 'Astronaut Suit'
+          },
+          {
+            value: 'Avalanche'
+          },
+          {
+            value: 'Cave Man'
+          },
+          {
+            value: 'Biker Jacket'
           }
         ],
         prefix: 'Body',
@@ -123,14 +236,43 @@ export default {
         ],
         prefix: 'Eyes',
         backgroundColor: '#fff'
+      },
+      Color: {
+        options: [
+          {
+            value: 'test'
+          },
+          {
+            value: 'test'
+          },
+          {
+            value: 'test'
+          }
+        ],
+        prefix: 'Color',
+        backgroundColor: '#fff'
+      },
+      Mouth: {
+        options: [
+          {
+            value: 'test'
+          },
+          {
+            value: 'test'
+          },
+          {
+            value: 'test'
+          }
+        ],
+        prefix: 'Mouth',
+        backgroundColor: '#fff'
       }
     }
   }
 }
 </script>
 
-<style lang="scss">
-
+<style>
 .card-content .tag-list-item {
   padding:7px 5px
 }
@@ -148,7 +290,7 @@ export default {
 
 html {
   min-height: 100% !important;
-  height: 100%;
+    height: 100%;
 }
 
 .market-filter {
@@ -168,14 +310,14 @@ html {
 }
 
 .dropdown {
-  border:3px solid #5142FC!important;
+  border:5px solid #000!important;
   margin:10px!important;
   color:#FFA035!important;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 40px!important;
+  border-radius: 5px!important;
 }
 
 .dropdown .text {
@@ -188,8 +330,8 @@ html {
     z-index: 999;
     background: #fff;
     top: 50px;
-    border: 3px solid #5142FC!important;
-    border-radius: 20px;
+    border: 6px solid #000!important;
+    border-radius: 5px;
     display:none;
     height:auto!important
 }
@@ -202,7 +344,7 @@ html {
 }
 
 .expanded .text {
-  color:#5142FC!important
+  color:#000!important
 }
 
 .expanded .expand {

@@ -1,4 +1,4 @@
-# Nobly World - Website :)
+# DeFi Dinos - Website :)
 
 ## Project setup
 ```

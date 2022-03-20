@@ -15,6 +15,7 @@
         }
 
         p {
+            font-family: Helvetica;
             font-style: normal;
             font-weight: normal;
             font-size: 30px;
@@ -31,40 +32,34 @@
 }
 
 .card {
-    background-color: $--primary-card-bg-color;
-    box-shadow      : 0px 3px 16px rgba(47, 83, 109, 0.12);
-    border-radius   : 20px;
-    padding         : 15px;
-    max-width       : 400px;
-    margin-left     : auto;
-    margin-right    : auto;
-
-    font-family     : $font-nobly!important;
-
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     &.dino-card {
       max-width: 380px;
       margin: 0 auto 30px;
     }
-    &-content-header, &-img {
+    &-content-header h4, &-img {
         cursor: pointer;
     }
 
     img {
         width: 100%;
         height: 100%;
-        border-radius: 30px;
-        // border-radius: 30px 30px 10px 10px;
-        // margin-bottom: 20px;
+        border-radius: 30px 30px 10px 10px;
+        margin-bottom: 20px;
     }
 
 
     &-content {
-        // padding: 0 20px;
-        padding: 0 5px;
+        padding: 0 20px;
 
         &-header {
+          display: flex;
           align-items: center;
-          text-align: center;
             span {
                 height: 37px;
                 width: 37px;
@@ -79,10 +74,10 @@
             }
 
             h4 {
-                // font-family: Dinosaur;
+                font-family: Dinosaur;
                 font-style: normal;
                 font-weight: normal;
-                // font-size: 30px;
+                font-size: 30px;
                 line-height: 42px;
                 color: #000000;
                 display: inline-block;
@@ -131,49 +126,6 @@
                 }
             }
         }
-
-        .author {
-            .avatar {
-                width: 44px;
-                height: 44px;
-                border-radius: 15px;
-                margin: 0;
-                padding: 0;
-                img {
-                    height: auto;
-                    max-width: 100%;
-                    vertical-align: middle;
-                    // border-radius: 5px1;
-                    width: 100%;
-                    /* height: 100%; */
-                    border-radius: 5px;
-                }
-    
-                .content-text {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .content-left {
-            text-align: left;
-        }
-
-        .content-right {
-            text-align: right;
-        }
-
-        .content-text-bold {
-            font-weight: bold;
-        }
-
-        .content-text {
-            font-size: 15px;
-        }        
-
-        .content-text-tip {
-            font-size: 13px
-        }
     }
 }
 
@@ -190,152 +142,6 @@
     }
 
 }
-
-.nobly {
-    font-family: $font-nobly;
-    color: white;
-
-    .item-details {
-
-        &-left {
-            padding-right: 30px;
-        }
-
-        &.right {
-            padding-left: 30px;
-        }
-
-        .item-img {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: start;
-            -webkit-align-items: flex-start;
-                -ms-flex-align: start;
-                    align-items: flex-start;     
-            margin: 0;
-            padding: 0;
-            max-width: 100%;
-            
-            img {
-                width: 100%;
-            }
-        }
-
-        .item-contents {
-
-            .item-title {
-                h2 {
-                    margin-bottom: 18px;
-                    line-height: 40px;
-                }
-            }
-
-            .item-infor {
-                .item-owner {
-                    .author {
-                        display: flex;
-                        align-items: center;
-                        .avatar {
-                            width: 44px;
-                            height: 44px;
-                            border-radius: 20px;
-                            margin-right: 15px;
-
-                            img {
-                                border-radius: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .item-desc {
-                p {
-                    font-size: 14px;
-                    line-height: 22px;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    margin-left: 0;
-                    margin-right: 0;
-                    padding-left: 0;
-                    padding-right: 0px;
-                    text-align: justify;
-                }
-            }
-
-            .item-price {                
-                .heading {
-                    font-weight: bold;
-                }
-                h5 {
-                    margin: 0;
-                }
-                .price, .count-down {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 5px 20px;
-
-                    .price-box {
-                        display: flex;
-                        align-items: center;
-
-                        h5 {
-                            font-size: 16px;
-                            font-weight: bold;
-                        }
-                    }
-                }               
-                
-            }
-
-            .meta-info {
-                background-color: $--primary-card-bg-color;
-                border-radius: 10px;
-                padding: 5px 10px;
-                .row {
-                    align-items: center;
-                }
-            }
-
-            .nobly-button {
-                display: block;
-                text-align: center;
-                padding: 12px 40px;
-                margin-bottom: 23px;
-                border: 2px solid white;
-                border-radius: 30px;
-                color: white;
-                font-weight: bold;
-
-                &:hover {
-                    color: black;
-                    background-color: white;
-                }
-            }
-
-            .item-attr {
-                .header {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                }
-
-                .item-option {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    font-size: 16px;
-                }
-            }
-            
-        }
-    }
-}
-
-
 
 
 @media(max-width:575px) {
@@ -571,14 +377,7 @@
     }
 }
 
-@media(min-width:992px) and (max-width: 1300px) {
-    .connect-box {
-        position: unset;
-        padding-top: 70px;
-    }
-}
-
-@media(min-width:1301px) {
+@media(max-width: 1300px) {
     .connect-box {
         position: unset;
         padding-top: 70px;

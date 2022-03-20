@@ -1,45 +1,30 @@
-
 <template>
-  <header id="navBar" class="sticky-top header-fixed" :class="toggleNavClass()">
-    <nav class="navbar navbar-expand-lg navbar-dark" v-bind:class=" { 'navbarOpen': show }">
-      <div  id="nav_1" class="container pt-1 px-5">
-        <a class="navbar-brand" href="/">LOGO of SITE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" @click.stop="toggleNavbar()">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" v-bind:class="{ 'show': show }">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <router-link :class="isPath('/')?'nav-link':''" :to="{ name: 'home'}"> Mint </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link :class="isPath('/details')?'nav-link':''" :to="{ name: 'details'}"> About </router-link>
-                </li>                
-                <li class="nav-item">
-                  <router-link :class="isPath('/market')?'nav-link':''" :to="{ name: 'market'}"> Market </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link :class="isPath('/my-dinos')?'nav-link':''" :to="{ name: 'my-dinos'}"> My Dinos </router-link>
-                </li>
-            </ul>
-            <div class="actions mr-auto">
-              <div class="connect-box disconnected" :class="account?'connected':'not'">
-                  <button @click="openWalletModal">
-                    {{
-                        wrongChainId
-                        ? 'Wrong Network'
-                        : account
-                        ? shortenAddress(account)
-                        : 'Connect Wallet'
-                    }}
-                  </button>
-              </div>
+  <header class="navbar header-fixed">
+      <div class="container">
+        <nav>
+          <ul class="nav-items">
+            <li><router-link :class="isPath('/')?'menuActive':''" :to="{ name: 'home'}"> Claim </router-link></li>
+            <li><router-link :class="isPath('/details')?'menuActive':''" :to="{ name: 'details'}"> Details </router-link></li>
+            <li><router-link :class="isPath('/my-dinos')?'menuActive':''" :to="{ name: 'my-dinos'}"> My Dinos </router-link></li>
+            <li><router-link :class="isPath('/market')?'menuActive':''" :to="{ name: 'market'}"> Market </router-link></li>
+            <li><router-link :disabled="true" :class="{ disabled: true }" :to="{ name: 'dao'}"> DAO </router-link></li>
+          </ul>
+          <div class="actions">
+            <div class="connect-box disconnected" :class="account?'connected':'not'">
+                <button @click="openWalletModal">
+                  {{
+                      wrongChainId
+                      ? 'Wrong Network'
+                      : account
+                      ? shortenAddress(account)
+                      : 'Connect Wallet'
+                  }}
+                </button>
             </div>
-        </div>
-      </div>        
-    </nav>
-  </header>
-    
+          </div>
+        </nav>
+      </div>
+    </header>
 </template>
 
 <script>
@@ -59,15 +44,14 @@ export default {
   data () {
     return {
       dino: 1,
-      headerFix: false,
-      show: true
+      headerFix: true
     }
   },
   watch: {
     $route: {
       immediate: true,
       handler (to, from) {
-        document.title = to.meta.title || 'Nobly World'
+        document.title = to.meta.title || 'Defi Dinos'
       }
     }
   },
@@ -143,50 +127,12 @@ export default {
       if (this.dino > 1) {
         this.dino -= 1
       }
-    },
-    toggleNavbar() {
-      this.show = !this.show
-    },
-    toggleNavClass() {
-      if (this.headerFix == false) {
-        return 'fixed-nav';
-      } else {
-        return 'sticky-nav';
-      }
-    }
-  },
-  mounted() {
-    window.document.onscroll = () => {
-      let navBar = window.document.getElementById('navBar');
-      if (window.scrollY > navBar.offsetTop + 20) {
-        this.headerFix = true;
-      } else {
-        this.headerFix = false;
-      }
     }
   }
 }
 </script>
 
 <style>
-
-#navBar {
-  background-color: unset;
-  border-bottom: 1px solid rgba(235, 235, 235, 0.2);
-}
-
-#navBar.fixed-nav {
-  transition: 500ms;
-}
-
-#navBar.sticky-nav {
-  border: 0;
-  background-color: #14141f;
-  box-shadow: 0px 3px 15px -5px rgb(121 121 120 / 88%);
-  transition: 800ms;
-  padding: 0 5px;
-}
-
 .disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -201,7 +147,7 @@ export default {
 }
 
 .connect-box button {
-  font-family: $font;
+  font-family: 'Helvetica';
 }
 
 .connected button::after {
