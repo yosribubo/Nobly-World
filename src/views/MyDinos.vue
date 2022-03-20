@@ -15,7 +15,7 @@
                         <img src="@/assets/image/baby.svg" alt=""/>
                       </div>
                   </div>
-                  <div class="col-md-12 col-xl- item-details-right">
+                  <div class="col-md-12 col-xl-6 item-details-right">
                     <div class="content-right item-contents">
                       <div class="row item-title">
                         <div class="col-12">
@@ -160,32 +160,7 @@ export default {
 
 <style>
 
-.item-details {
-  .item-contents {
 
-  }
-}
-
-.item-details .content-right {
-}
-.item-details .content-left {
- }
-
-.item-details .item-img {
-
-}
-
-. .item-infor {
-  
-}
-
-.item-details .item-title {
-  font-size: 1.2rem;
-}
-
-.card-content .tag-list-item {
-  padding:7px 5px
-}
 
 .no-data {
   color:#fff;
@@ -196,6 +171,6 @@ export default {
 
 html {
   min-height: 100% !important;
-    height: 100%;
+  height: 100%;
 }
 </style>

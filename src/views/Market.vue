@@ -27,7 +27,9 @@
                     <div class="clearfix"></div>
                   </div>
                 </div>
-                <dino-card :market="false" />
+                <!-- <dino-card :market="false" /> -->
+                <nft-card />
+                <nft-card />
             </div>
         </div>
     </section>
@@ -44,6 +46,7 @@ import Navbar from '../components/Navbar.vue'
 import DinoModal from './DinoModal.vue'
 import DinoCard from '../components/DinoCard.vue'
 import WalletModal from '../components/WalletModal/index.vue'
+import NftCard from '../components/NftCard.vue'
 export default {
   computed: mapState([
     'isModalOpen',
@@ -52,7 +55,7 @@ export default {
     'totalSupply',
     'minting'
   ]),
-  components: { Navbar, DinoCard, DinoModal, WalletModal, VueDropdown },
+  components: { Navbar, DinoCard, DinoModal, WalletModal, VueDropdown, NftCard },
   methods: {
     setNewSelectedOption (selectedOption, element, type) {
       this[element].placeholder = selectedOption.value

@@ -185,7 +185,7 @@ export default {
 
 .card {
   margin: 25px;
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .card-content .tag-list-item {
