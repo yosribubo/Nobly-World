@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ComingSoon from '../views/ComingSoon.vue'
-import Details from '../views/Details.vue'
+import About from '../views/About.vue'
 import DinoModal from '../views/DinoModal.vue'
-import MyDinos from '../views/MyDinos.vue'
+import Detail from '../views/Detail.vue'
 import Market from '../views/Market.vue'
 
 Vue.use(VueRouter)
@@ -17,18 +17,9 @@ const routes = [
     meta: { title: 'Nobly World', transition: 'fade-in-up' }
   },
   {
-    path: '/details',
-    name: 'details',
-    component: Details,
-    meta: {
-      title: 'Nobly World',
-      transition: 'fade-in-up'
-    }
-  },
-  {
-    path: '/coming-soon',
-    name: 'coming-soon',
-    component: ComingSoon,
+    path: '/about',
+    name: 'about',
+    component: About,
     meta: {
       title: 'Nobly World',
       transition: 'fade-in-up'
@@ -44,9 +35,9 @@ const routes = [
     }
   },
   {
-    path: '/my-dinos',
-    name: 'my-dinos',
-    component: MyDinos,
+    path: '/detail',
+    name: 'detail',
+    component: Detail,
     meta: {
       title: 'Nobly World',
       transition: 'fade-in-up'

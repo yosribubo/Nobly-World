@@ -5,24 +5,41 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 30px;
     ul {
       margin-bottom: 0;
       flex: 0 1 60%;
       display: flex;
       justify-content: space-between;
-      li{
+      li {
         &:last-child {
           margin-right: 0px;
         }
         a {
           font-size: 30px;
-          color: $lightBlack;
-          &:hover {
-            color: $white;
-          } 
+          color: $lightBlack;      
+          font-weight: bold;    
+        }
+
+        a:hover {
+          color: white;
+        }
+
+        a:active {
+          color: white;
         }
       }
     }
+
+    a.router-link-exact-active.router-link-active.nav-link {
+      color: white!important;
+      
+    }
+
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link:active {
+      color: white;
+    }
+
     @include mq('tablet-wide', max){
         flex-wrap: wrap;
         ul {
@@ -54,12 +71,18 @@ header {
   .connect-box  {
       padding-top: 0;
       @include mq('tablet-wide', max){
-          margin-top: 30px;
+          margin-top    : 10px;
+          margin-bottom : 10px;
+          width         : 100%;
+          button {
+            width: 100%;
+          }
       }
       @include mq('tablet', max){
           button {
-            padding: 6px 20px 6px 40px;
-            font-size: 18px;
+            width     : 100%;
+            padding   : 6px 20px 6px 40px;
+            font-size : 18px;
           }
       }
   }

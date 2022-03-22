@@ -1,0 +1,94 @@
+.footer-light-style {
+    border-top: 1px solid gray;
+}
+.themesflat-container {
+    position     : relative;
+    margin-top   : 40px;
+    margin-left  : auto;
+    margin-right : auto;
+    padding-right: 35px;
+    padding-left : 80px;
+    width        : 1440px;
+    max-width    : 100%;
+
+    font-family: $font;
+    font-size: 19px;
+
+    .widget-logo {
+        margin-bottom: 30px;
+
+        .logo-footer {
+            margin-bottom: 15px;
+
+            span {
+                font-family: Hurricane;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        .sub-widget-logo {
+            color: white;
+            line-height: 30px;
+        }
+    }
+
+    .widget-menu {
+        .title-widget {
+            margin-bottom: 15px;
+            line-height-step: 26px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        ul {
+            li {
+                margin: 10px 0px;
+                a {
+                    color: $white;
+                }
+                a:hover {
+                    color: $purple;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .widget-social {
+        margin: 65px 0;
+        ul {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-bottom: 10px;
+                margin-right: 12px;
+                a {
+                    background-color: #EBEBEB;
+                    color           : $purple;
+
+                    width          : 40px;
+                    height         : 40px;
+                    border-radius  : 5px;
+                    text-align     : center;
+                    justify-content: center;
+                    align-items    : center;
+                    display        : -webkit-box;
+                    display        : -moz-box;
+                    display        : -ms-flexbox;
+                    display        : -webkit-flex;
+                    display        : flex;
+                    font-size      : 21px;
+                }
+                a:hover {
+                    color: $white;
+                    background-color: $purple;
+                }
+            }
+        }
+    }
+}

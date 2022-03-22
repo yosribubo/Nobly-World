@@ -6,14 +6,18 @@ $bgColor: #F6F8FA;
 $lightBlack: #8F8F8F;
 $orange: #FD6179;
 $blue: #1f7ae2;
-$purple: #4E5BDE;
+$purple: #5142FC;
 
-$background-color-primary: #14141F;
-$background-color-button: #14141F;
-$--primary-background-color: #14141F;
 
-$--primary-border-color: #5142FC;
+$background-color: #14141F;
 
-$--primary-card-bg-color: #343444;
+$font-color-main: $white;
+$font-color-hover: $purple;
+$font-size: 16px;
 
-$dropdown-font: 'Urbanist sans-serif';
+$button-bg-color: #14141F;
+$button-bg-color-purple: $purple;
+$button-bg-color-hover: $white;
+$button-border-color: $purple;
+
+$card-bg-color: #343444;

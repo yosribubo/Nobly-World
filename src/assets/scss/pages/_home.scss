@@ -1,13 +1,44 @@
+.element {
+    font-family: $font!important;     
+
+    .element-image {
+        margin-bottom: 16px;
+    }
+
+    .element-image img {
+        border        : 10px solid #FFFFFF;
+        filter        : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius : 20px;
+    }
+
+    .element-box {
+        p {
+            font-family: $font;
+            font-weight: bold;
+        }
+        .element-box-inner-header {
+            margin: 0px 0px;
+            a, span {
+                font-family: $font;
+                font-weight: bold;
+                color: $purple;
+            }
+        }
+    }
+
+}
+
 .index {
     padding-top: 80px;
-    padding-bottom: 154px;
+    padding-bottom: 80px;
     box-sizing: border-box;
 
     &-header {
         padding-bottom: 70px;
 
         h3 {
-            font-family: 'Dinosaur';
+            font-family: $font;
+            font-weight: bold;
             font-size: 60px;
             line-height: 84px;
             color: #FFFFFF;
@@ -18,10 +49,11 @@
             font-style: normal;
             font-weight: normal;
             font-size: 30px;
-            line-height: 34px;
+            line-height: 50px;
             color: #FFFFFF;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-family: 'Helvetica';
+            text-align: justify;
 
             &:last-child {
                 margin-bottom: 0px;
@@ -31,7 +63,7 @@
 }
 
 .card {
-    background-color: $--primary-card-bg-color;
+    background-color: $card-bg-color;
     color           : white;
     box-shadow      : 0px 3px 16px rgba(47, 83, 109, 0.12);
     border-radius   : 20px;
@@ -39,8 +71,8 @@
     max-width       : 400px;
     margin-left     : auto;
     margin-right    : auto;
-
-    font-family     : $font-nobly!important;
+    align-items     : center;
+    font-family     : $font!important;
 
     &.dino-card {
       max-width: 380px;
@@ -48,6 +80,11 @@
     }
     &-content-header, &-img {
         cursor: pointer;
+    }
+
+    .card-img {
+        max-width: 300px;
+        max-height: 300px;
     }
 
     img {
@@ -62,10 +99,13 @@
     &-content {
         // padding: 0 20px;
         padding: 0 5px;
+        margin-top: 10px;
 
         &-header {
           align-items: center;
           text-align: center;
+          padding: 5px 0px;
+
             span {
                 height: 37px;
                 width: 37px;
@@ -85,9 +125,14 @@
                 font-weight: normal;
                 // font-size: 30px;
                 line-height: 42px;
-                color: #000000;
+                color: white;
                 display: inline-block;
                 align-self: center;
+            }
+
+            h5 {
+                font-size: 1.3rem;
+                font-weight: bold;
             }
         }
 
@@ -118,7 +163,7 @@
                 }
                 a {
                     padding: 6px 10px 9px 13px;
-                    font-family: 'Dinosaur';
+                    font-family: $font;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 16px;
@@ -169,11 +214,11 @@
         }
 
         .content-text {
-            font-size: 15px;
+            font-size: 1rem;
         }        
 
         .content-text-tip {
-            font-size: 13px
+            font-size: 1rem;
         }
     }
 }
@@ -193,17 +238,17 @@
 }
 
 .nobly {
-    font-family: $font-nobly;
+    font-family: $font;
     color: white;
+    font-size: $font-size;
 
     .item-details {
 
         &-left {
-            padding-right: 30px;
+            padding-right: 50px;
         }
-
-        &.right {
-            padding-left: 30px;
+        &-right {
+            padding-left: 50px;
         }
 
         .item-img {
@@ -218,26 +263,32 @@
             margin: 0;
             padding: 0;
             max-width: 100%;
-            
-            img {
+            padding-right: 50px;
+            img {                
                 width: 100%;
+                border-radius: 50px;
             }
         }
 
         .item-contents {
 
             .item-title {
+                margin-bottom: 1rem;
                 h2 {
-                    margin-bottom: 18px;
+                    margin-bottom: 25px;
                     line-height: 40px;
+                    font-size: 2.5rem;
                 }
             }
 
             .item-infor {
+                margin-bottom: 1.5rem;
                 .item-owner {
                     .author {
                         display: flex;
                         align-items: center;
+                        font-size: 1.3rem;
+
                         .avatar {
                             width: 44px;
                             height: 44px;
@@ -248,26 +299,33 @@
                                 border-radius: 10px;
                             }
                         }
+
+                        .info {
+                            span, h6 {
+                                margin: 3px 0px;
+                            }
+                        }
                     }
                 }
             }
 
             .item-desc {
-                p {
-                    font-size: 14px;
-                    line-height: 22px;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    margin-left: 0;
-                    margin-right: 0;
-                    padding-left: 0;
-                    padding-right: 0px;
+                margin-bottom: 0.5rem;
+                div {
+                    font-size: 1.2rem;
+                    line-height: 28px;
                     text-align: justify;
+                    // width:100%;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: clip;
                 }
             }
 
-            .item-price {                
+            .item-price {    
+                margin-bottom: 1.5rem;
                 .heading {
+                    font-size: 1.3rem;
                     font-weight: bold;
                 }
                 h5 {
@@ -277,44 +335,29 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding: 5px 20px;
+                    padding: 10px 5px;
 
                     .price-box {
                         display: flex;
                         align-items: center;
 
-                        h5 {
-                            font-size: 16px;
+                        h5 {                           
                             font-weight: bold;
                         }
-                    }
-                }               
+                    }                    
+                }
+
+                .count-down .span {
+                    font-size: 1.3rem;
+                }
                 
             }
 
-            .meta-info {
-                background-color: $--primary-card-bg-color;
-                border-radius: 10px;
-                padding: 5px 10px;
-                .row {
-                    align-items: center;
-                }
-            }
-
-            .nobly-button {
-                display: block;
-                text-align: center;
-                padding: 12px 40px;
-                margin-bottom: 23px;
-                border: 2px solid white;
-                border-radius: 30px;
-                color: white;
-                font-weight: bold;
-
-                &:hover {
-                    color: black;
-                    background-color: white;
-                }
+            .item-button {
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+                padding: 10px;
+                font-size: 1.3rem;
             }
 
             .item-attr {
@@ -326,13 +369,53 @@
                 }
 
                 .item-option {
+                    margin-left: 10px;
                     padding-top: 5px;
                     padding-bottom: 5px;
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
             }
+
+            .meta-info {
+                background-color: $card-bg-color;
+                border-radius: 10px;
+                padding: 5px 10px;
+                margin: 5px 0px;
+                .row {
+                    align-items: center;
+                }
+            }
+
+            .nobly-button {
+                display: block;
+                text-align: center;
+                padding: 12px 40px;
+                border: 2px solid white;
+                border-radius: 30px;
+                color: white;
+                font-weight: bold;
+
+                &:hover {
+                    color: black;
+                    background-color: white;
+                }
+            }
+
+            
             
         }
+    }
+
+    @include mq('tablet', max){
+        .item-details .item-img {
+            padding-right: 0;
+        }
+    }
+    @include mq('tablet', max){
+        
+    }
+    @include mq('phablet', max){
+        
     }
 }
 

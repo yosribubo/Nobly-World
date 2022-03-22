@@ -8,7 +8,7 @@
   @import "~bootstrap/scss/bootstrap.scss";
   @import "~bootstrap/scss/bootstrap-grid.scss";
   @import "./assets/scss/main.scss";
-
+  
   .header-fixed {
     position: fixed;
     width: 100%;
@@ -20,7 +20,7 @@
   }
 
   body {
-    background: $--primary-background-color;
+    background: $background-color;
   }
 
   .highlight {

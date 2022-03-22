@@ -8,7 +8,7 @@
                 <div class="index-header market-header">
                     <h3>MarketPlace</h3>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12" style="margin: 60px 0px 100px 0px;">
                   <div class="market-bg">
                     <div class="market-filters">
                         <div class="market-filter">
@@ -66,20 +66,17 @@ export default {
     return {
       sortBy: {
         options: [
-          {
-            value: 'PRICE (LOW TO HIGH)'
+           {
+            value: 'test'
           },
           {
-            value: 'PRICE (HIGH TO LOW)'
+            value: 'test'
           },
           {
-            value: 'ID (LOW TO HIGH)'
-          },
-          {
-            value: 'ID (HIGH TO LOW)'
+            value: 'test'
           }
         ],
-        prefix: 'Sort By',
+        prefix: 'Sort1',
         backgroundColor: '#fff'
       },
       Body: {
@@ -94,7 +91,7 @@ export default {
             value: 'test'
           }
         ],
-        prefix: 'Body',
+        prefix: 'Sort2',
         backgroundColor: '#fff'
       },
       Head: {
@@ -109,7 +106,7 @@ export default {
             value: 'test'
           }
         ],
-        prefix: 'Head',
+        prefix: 'Sort3',
         backgroundColor: '#fff'
       },
       Eyes: {
@@ -124,7 +121,7 @@ export default {
             value: 'test'
           }
         ],
-        prefix: 'Eyes',
+        prefix: 'Sort4',
         backgroundColor: '#fff'
       }
     }
@@ -173,7 +170,7 @@ html {
 .dropdown {
   border:3px solid #5142FC!important;
   margin:10px!important;
-  color:#FFA035!important;
+  color: #5142FC!important;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -184,6 +181,10 @@ html {
 .dropdown .text {
   font-family: "Dinosaur"!important;
   font-size:18px!important
+}
+
+.dropdown .dropdown-lavel .angle-down {
+  color: #5142FC;
 }
 
 .expand {

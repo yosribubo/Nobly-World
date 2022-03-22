@@ -2,8 +2,8 @@
 <template>
   <header id="navBar" class="sticky-top header-fixed" :class="toggleNavClass()">
     <nav class="navbar navbar-expand-lg navbar-dark" v-bind:class=" { 'navbarOpen': show }">
-      <div  id="nav_1" class="container pt-1 px-5">
-        <a class="navbar-brand" href="/">LOGO of SITE</a>
+      <div  id="nav_1" class="container">
+        <a class="navbar-brand" href="/"><img src="../assets/image/mark-blood-icon.png" style="width: 50px; height: 50px"/><span class="font-effect-fire">NoblyWorld</span> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" @click.stop="toggleNavbar()">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,14 +13,14 @@
                     <router-link :class="isPath('/')?'nav-link':''" :to="{ name: 'home'}"> Mint </router-link>
                 </li>
                 <li class="nav-item">
-                  <router-link :class="isPath('/details')?'nav-link':''" :to="{ name: 'details'}"> About </router-link>
+                  <router-link :class="isPath('/about')?'nav-link':''" :to="{ name: 'about'}"> About </router-link>
                 </li>                
                 <li class="nav-item">
                   <router-link :class="isPath('/market')?'nav-link':''" :to="{ name: 'market'}"> Market </router-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <router-link :class="isPath('/my-dinos')?'nav-link':''" :to="{ name: 'my-dinos'}"> My Dinos </router-link>
-                </li>
+                </li> -->
             </ul>
             <div class="actions mr-auto">
               <div class="connect-box disconnected" :class="account?'connected':'not'">
@@ -60,7 +60,7 @@ export default {
     return {
       dino: 1,
       headerFix: false,
-      show: true
+      show: false
     }
   },
   watch: {
@@ -171,20 +171,25 @@ export default {
 <style>
 
 #navBar {
-  background-color: unset;
+  background-color: #14141f;
   border-bottom: 1px solid rgba(235, 235, 235, 0.2);
 }
 
 #navBar.fixed-nav {
-  transition: 500ms;
+  transition: 300ms;
 }
 
 #navBar.sticky-nav {
   border: 0;
   background-color: #14141f;
   box-shadow: 0px 3px 15px -5px rgb(121 121 120 / 88%);
-  transition: 800ms;
+  transition: 300ms;
   padding: 0 5px;
+}
+
+.navbar-brand {
+  font-family: Hurricane;
+  font-size: 30px;
 }
 
 .disabled {

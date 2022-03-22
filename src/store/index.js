@@ -44,8 +44,8 @@ const getRecentTransactions = () => {
 }
 export default new Vuex.Store({
   state: {
-    URI: 'https://defidinos-nft.vercel.app/metadata/',
-    FullMeta: 'https://nft.defidinos.com/metadata.json',
+    URI: 'https://noblyworlds-nft.vercel.app/metadata/',
+    FullMeta: 'https://nft.noblyworlds.com/metadata.json',
     moodal: 0,
     library: null,
     account: null,

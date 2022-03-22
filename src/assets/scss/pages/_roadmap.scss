@@ -11,6 +11,7 @@ section.roadmap {
       margin-bottom: 100px;
       align-items: center;
       .progress {
+        background-color: $background-color;
         flex: 0 0 100px;
         width: 100px;
         height: 100px;
