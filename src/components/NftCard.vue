@@ -12,13 +12,13 @@
                         </div>
                         <div class="card-content">
                             <div class="card-content-header">
-                                <h5>Nobly NFT #1</h5>
+                               <a href="#"><h5>Nobly NFT #2</h5></a>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="row author">
                                             <div class="content-text-tip content-left"> Creator </div>
-                                            <div class="content-text content-text-bold content-left"> SalvadorDail </div>
+                                            <div class="content-text content-text-bold content-left"> <a href="#">SalvadorDail </a></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -40,13 +40,13 @@
                         </div>
                         <div class="card-content">
                             <div class="card-content-header">
-                                <h5>Nobly NFT #2</h5>
+                               <a href="#"><h5>Nobly NFT #2</h5></a>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="row author">
                                             <div class="content-text-tip content-left"> Creator </div>
-                                            <div class="content-text content-text-bold content-left"> SalvadorDail </div>
+                                            <div class="content-text content-text-bold content-left"> <a href="#">SalvadorDail </a></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-            <div class="card">
+                <div class="card">
                     <div>
                         <div class="card-img">
                             <router-link :class="isPath('/detail')?'nav-link':''" :to="{ name: 'detail'}"> 
@@ -68,13 +68,13 @@
                         </div>
                         <div class="card-content">
                             <div class="card-content-header">
-                                <h5>Nobly NFT #3</h5>
+                               <a href="#"><h5>Nobly NFT #3</h5></a>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="row author">
                                             <div class="content-text-tip content-left"> Creator </div>
-                                            <div class="content-text content-text-bold content-left"> SalvadorDail </div>
+                                            <div class="content-text content-text-bold content-left"> <a href="#">SalvadorDail </a></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-            <div class="card">
+                <div class="card">
                     <div>
                         <div class="card-img">
                             <router-link :class="isPath('/detail')?'nav-link':''" :to="{ name: 'detail'}"> 
@@ -96,13 +96,13 @@
                         </div>
                         <div class="card-content">
                             <div class="card-content-header">
-                                <h5>Nobly NFT #4</h5>
+                               <a href="#"><h5>Nobly NFT #2</h5></a>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="row author">
                                             <div class="content-text-tip content-left"> Creator </div>
-                                            <div class="content-text content-text-bold content-left"> SalvadorDail </div>
+                                            <div class="content-text content-text-bold content-left"> <a href="#">SalvadorDail </a></div>
                                     </div>
                                 </div>
                                 <div class="col-6">

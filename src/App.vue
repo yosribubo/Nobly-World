@@ -19,11 +19,7 @@
   }
 
   body {
-<<<<<<< HEAD
     background: $background-color;
-=======
-    background:#131701;
->>>>>>> 63fa7c9d74d2bd236e16e6e84133a5893685af4e
   }
 
   .highlight {

@@ -22,9 +22,18 @@
                           <h2> The Nobly iPhone NFT </h2>
                         </div>
                       </div>
+                      <!-- <div class="row">
+                        <div class="col-6 d-flex">
+                          <div class="me-auto"><i class="fa fa-eye" aria-hidden="true"></i>225</div>
+                          <div class=""></div>
+                        </div>
+                        <div class="col-6 d-flex">
+                          right
+                        </div>
+                      </div> -->
                       <div class="item-infor">
                         <div class="row item-owner">
-                          <div class="col-6">
+                          <div class="ol-sm-12 col-md-6">
                             <div class="meta-info">
                               <div class="author">
                                   <!-- <div class="avatar" style="width: 44px; height: 44px;">
@@ -32,12 +41,12 @@
                                   </div> -->
                                   <div class="info">
                                       <span>Owned By</span>
-                                      <h6> <a href="author02.html">Ralph Garraway</a> </h6>
+                                      <h6> <a href="#">Ralph Garraway</a> </h6>
                                   </div>
                               </div>
                             </div>
                           </div>
-                          <div class="col-6">
+                          <div class="col-sm- 12 col-md-6">
                             <div class="meta-info">
                               <div class="author">
                                   <!-- <div class="avatar" style="width: 44px; height: 44px;">
@@ -45,7 +54,7 @@
                                   </div> -->
                                   <div class="info">
                                       <span>Create By</span>
-                                      <h6> <a href="author02.html">Freddie Carpenter</a> </h6>
+                                      <h6> <a href="#">Freddie Carpenter</a> </h6>
                                   </div>
                               </div>
                             </div>
@@ -53,12 +62,13 @@
                         </div>
                       </div>
                       <div class="row item-desc">
-                        <div style="color: white;"> Habitant sollicitudin faucibus cursus lectus pulvinar dolor non ultrices eget.
-                                      Facilisi lobortisal morbi fringilla urna amet sed ipsum vitae ipsum malesuada.
+                        <div> Habitant sollicitudin faucibus cursus lectus pulvinar dolor non ultrices eget.
+                                      Facilisi lobortisal morbi fringilla urna amet sed ipsum vitae ipsum malesuada t sollicitudin faucibus cursus lectus pulvinar dolor non ultrices eget.
+                                      Facilisi lobortisal morbi fringilla urna amet .
                                      </div>
                       </div>
                       <div class="row item-price">
-                        <div class="col-md-6 col-xl-6">
+                        <div class="col-sm-12 col-md-7">
                           <div class="meta-info">
                             <div class="price">
                               <div class="heading">Current Buy</div>
@@ -69,7 +79,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-6 col-xl-6">
+                        <div class="col-sm-12 col-md-5">
                           <div class="meta-info">
                             <div class="count-down">
                               <div class="heading">Countdown</div>
@@ -88,27 +98,28 @@
                           </span>
                         </div>
                         <div class="row item-option">
-                          <div class="col-3">
-                            ATTR-1
+                          <div class="col-2">
+                            <div class="attr-title">
+                              ATTR-1
+                            </div>                            
                           </div>
-                          <div class="col-9">
-                            CONTENT-1
-                          </div>
-                        </div>
-                        <div class="row item-option">
-                          <div class="col-3">
-                            ATTR-2
-                          </div>
-                          <div class="col-9">
-                            CONTENT-2
+                          <div class="col-10">
+                              <div class="attr-content">
+                                Habitant sollicitudin faucibus cursus lectus pulvinar dolor non ultrices eget icitudin faucibus cursus le.
+                              </div>
                           </div>
                         </div>
                         <div class="row item-option">
-                          <div class="col-3">
-                            ATTR-3
+                          <div class="col-2">
+                            <div class="attr-title">
+                              ATTR-2
+                            </div>                            
                           </div>
-                          <div class="col-9">
-                            CONTENT-3
+                          <div class="col-10">
+                              <div class="attr-content">
+                                Abitant sollicitudin faucibus cursus lectus pulvinar dolor non ultrices eget.
+                                      Facilisi lobortisal morbi fr icitudin faucibus cur.
+                              </div>
                           </div>
                         </div>
                       </div>
@@ -117,15 +128,20 @@
                 </div>                
             </div>
         </div>
-    </section>
-    <section>
-      <div class="item-relations container" style="color: white;">
-        <div class="row index-header">
-          <h3>Relation NFTs</h3>
+        <div class="index detail">          
+          <div class="container">
+            <div class="index-header">
+                <h3>Related NFTs</h3>
+            </div>
+            <div class="row">
+              <nft-card />
+            </div>
+            
+          </div>
         </div>
-        <nft-card />
-      </div>
+        
     </section>
+    <Footer />
   </div>
 </template>
 
@@ -133,11 +149,11 @@
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
 import { shortenAddress } from '../utils'
 // import DinoCard from '../components/DinoCard.vue'
+import NftCard from '../components/NftCard.vue'
 import Navbar from '../components/Navbar.vue'
+import Footer from '../components/Footer.vue'
 import DinoModal from './DinoModal.vue'
 import WalletModal from '../components/WalletModal/index.vue'
-import NftCard from '../components/NftCard.vue'
-
 export default {
   computed: mapState([
     'isModalOpen',
@@ -147,7 +163,7 @@ export default {
     'minting',
     'myDinos'
   ]),
-  components: { Navbar, DinoModal, WalletModal, NftCard },
+  components: { Navbar, NftCard, DinoModal, WalletModal, Footer },
   methods: {
     ...mapActions(['connectWallet', 'connectNetwork']),
     ...mapMutations(['openWalletModal', 'setMinting', 'AddTransaction']),
@@ -159,8 +175,6 @@ export default {
 
 <style>
 
-
-
 .no-data {
   color:#fff;
   text-align: center;
@@ -171,5 +185,10 @@ export default {
 html {
   min-height: 100% !important;
   height: 100%;
+}
+
+.detail.index {
+  padding-top: 30px!important;
+  padding-bottom: 30px!important;
 }
 </style>

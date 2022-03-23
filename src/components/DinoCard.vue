@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row">
+    <div class="row" v-if="!market">
       <div class="col-md-4" v-for="(item,index) of myDinos" :key="`${item.id}`">
         <div class="card">
             <div class="card-img" @click="showModal(index)">
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" v-if="market">
       <template v-for="(item,index) of marketPlaceItems">
       <div class="col-md-4" v-if="item.show===1||item.show===undefined" :key="`${item.id}`">
         <div class="card">

@@ -63,7 +63,7 @@
         }
 
         h5 {
-            font-family: 'Dinosaur';
+            font-family: $font;
             font-weight: 400;
             font-size: 120px;
             text-transform: uppercase;   
@@ -75,7 +75,7 @@
         }
 
         h3 {
-            font-family: 'Dinosaur';
+            font-family: $font;
             font-weight: 400;
             font-size: 60px;
             text-transform: uppercase;
@@ -90,9 +90,10 @@
         display: flex;
         column-gap: 61px;
         margin-top: 41px;
+        margin-bottom: 50px;
         flex-wrap: wrap;
         justify-content: center;
-
+        z-index: 2;
         img {
             width: 550px;
         }
@@ -115,7 +116,7 @@
                 border-radius: 10px;
 
                 span {
-                    font-family: 'Dinosaur';
+                    font-family: $font;
                     font-size: 48px;
                     line-height: 67px;
                     text-align: center;
@@ -126,7 +127,7 @@
                 a {
                     font-size: 50px;
                     color: #D0410A;
-                    font-family: 'Dinosaur';
+                    font-family: $font;
                     text-decoration: none;
                     user-select: none;
                 }
@@ -134,7 +135,7 @@
             }
 
             p {
-                font-family: 'Dinosaur';
+                font-family: $font;
                 font-size: 28px;
                 line-height: 39px;
                 text-align: center;

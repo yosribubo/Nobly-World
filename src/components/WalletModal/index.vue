@@ -1,8 +1,8 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop">
-      <div class="market-modal" role="dialog" aria-labelledby="Wallet Modal" aria-describedby="Connect Your Wallet">
-        <header class="market-modal-header" id="modalTitle">
+    <div class="nobly-modal-backdrop">
+      <div class="nobly-modal" role="dialog" aria-labelledby="Wallet Modal" aria-describedby="Connect Your Wallet">
+        <header class="nobly-modal-header" id="modalTitle">
           <slot name="header">
             {{ account ? 'Account' : 'Connect Wallet ' }}
           </slot>
@@ -15,7 +15,7 @@
             x
           </button>
         </header>
-        <section class="market-modal-body" id="modalDescription">
+        <section class="nobly-modal-body" id="modalDescription">
           <slot name="body">
             <ul class="wallets" v-if="!account">
               <li
@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style>
- .market-modal {
+ .nobly-modal {
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
@@ -121,9 +121,5 @@ export default {
     flex-direction: column;
     border-radius: 30px;
     padding: 18px;
-}
-
-.market-modal-header {
-  background: #FFFFFF;
 }
 </style>

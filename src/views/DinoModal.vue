@@ -42,7 +42,7 @@
                         <h2>Sell your dino</h2>
                        <div class="quantity">
                             <input type="number" v-model="marketPrice" placeholder="1">
-                            <label for="">AVAX</label>
+                            <label for="">ETH</label>
                        </div>
                         <button class="highlight" v-if="getCurrentDino.forSale===-1" @click="marketPlace(getCurrentDino.nftId)">List for sale</button>
                         <button class="highlight" v-if="getCurrentDino.forSale!==-1" @click="marketPlace(getCurrentDino.nftId)">Update Price</button>
@@ -271,7 +271,7 @@ export default {
 .card {
     border: 5px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    max-width:363px;
+    /* max-width:400px; */
     margin-left:0!important
 }
 

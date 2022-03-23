@@ -1,45 +1,41 @@
-
 <template>
   <header id="navBar" class="sticky-top header-fixed" :class="toggleNavClass()">
-    <nav class="navbar navbar-expand-lg navbar-dark" v-bind:class=" { 'navbarOpen': show }">
-      <div  id="nav_1" class="container">
-        <a class="navbar-brand" href="/"><img src="../assets/image/mark-blood-icon.png" style="width: 50px; height: 50px"/><span class="font-effect-fire">NoblyWorld</span> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" @click.stop="toggleNavbar()">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="../assets/image/mark-blood-icon.png"  width="56" height="56"/><span class="font-effect-fire">NoblyWorld</span> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" v-bind:class="{ 'show': show }">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <router-link :class="isPath('/')?'nav-link':''" :to="{ name: 'home'}"> Mint </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link :class="isPath('/about')?'nav-link':''" :to="{ name: 'about'}"> About </router-link>
-                </li>                
-                <li class="nav-item">
-                  <router-link :class="isPath('/market')?'nav-link':''" :to="{ name: 'market'}"> Market </router-link>
-                </li>
-                <!-- <li class="nav-item">
-                  <router-link :class="isPath('/my-dinos')?'nav-link':''" :to="{ name: 'my-dinos'}"> My Dinos </router-link>
-                </li> -->
-            </ul>
-            <div class="actions mr-auto">
-              <div class="connect-box disconnected" :class="account?'connected':'not'">
-                  <button @click="openWalletModal">
-                    {{
-                        wrongChainId
-                        ? 'Wrong Network'
-                        : account
-                        ? shortenAddress(account)
-                        : 'Connect Wallet'
-                    }}
-                  </button>
-              </div>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <router-link :class="isPath('/')?'nav-link':''" :to="{ name: 'home'}"> Mint </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link :class="isPath('/about')?'nav-link':''" :to="{ name: 'about'}"> About </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link :class="isPath('/market')?'nav-link':''" :to="{ name: 'market'}"> Market </router-link>
+            </li>    
+          </ul>
+          <div class="actions ms-auto">
+            <div class="connect-box disconnected" :class="account?'connected':'not'">
+                <button @click="openWalletModal">
+                  {{
+                      wrongChainId
+                      ? 'Wrong Network'
+                      : account
+                      ? shortenAddress(account)
+                      : 'Connect Wallet'
+                  }}
+                </button>
             </div>
-        </div>
-      </div>        
+          </div>
+        </div> 
+      </div> 
     </nav>
   </header>
-    
+
 </template>
 
 <script>
@@ -60,7 +56,7 @@ export default {
     return {
       dino: 1,
       headerFix: false,
-      show: false
+      show: true
     }
   },
   watch: {
@@ -144,32 +140,19 @@ export default {
         this.dino -= 1
       }
     },
-    toggleNavbar() {
-      this.show = !this.show
+    toggleNavbr() {
+      var toggler = document.getElementById('navbar');
+      alert('togglenab');
     },
     toggleNavClass() {
-      if (this.headerFix == false) {
-        return 'fixed-nav';
-      } else {
-        return 'sticky-nav';
-      }
-    }
-  },
-  mounted() {
-    window.document.onscroll = () => {
-      let navBar = window.document.getElementById('navBar');
-      if (window.scrollY > navBar.offsetTop + 20) {
-        this.headerFix = true;
-      } else {
-        this.headerFix = false;
-      }
+      return this.headerFix;
     }
   }
 }
 </script>
 
 <style>
-
+/* 
 #navBar {
   background-color: #14141f;
   border-bottom: 1px solid rgba(235, 235, 235, 0.2);
@@ -190,7 +173,7 @@ export default {
 .navbar-brand {
   font-family: Hurricane;
   font-size: 30px;
-}
+} */
 
 .disabled {
     opacity: 0.5;
@@ -206,7 +189,7 @@ export default {
 }
 
 .connect-box button {
-  font-family: $font;
+  font-family: 'Helvetica';
 }
 
 .connected button::after {

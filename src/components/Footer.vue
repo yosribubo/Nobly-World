@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer" class="footer-light-style clearfix">
+    <div id="footer" class="footer-light-style clearfix">
         <div class="themesflat-container" style="color:white;">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-12">
@@ -10,10 +10,10 @@
                             </a>
                             <span class="font-effect-fire">NoblyWorld</span>
                         </div>
-                        <p class="sub-widget-logo">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
+                        <p class="sub-widget-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-5 col-5">
+                <div class="col-lg-2 col-md-4 col-sm-12 col-12">
                     <div class="widget widget-menu style-1">
                         <h5 class="title-widget">My Account</h5>
                         <ul>
@@ -24,7 +24,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-7 col-7">
+                <div class="col-lg-2 col-md-4 col-sm-12 col-12">
                     <div class="widget widget-menu style-2">
                         <h5 class="title-widget">Resources</h5>
                         <ul>
@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-5 col-5">
+                <div class="col-lg-2 col-md-4 col-sm-12 col-12">
                     <div class="widget widget-menu fl-st-3">
                         <h5 class="title-widget">Company</h5>
                         <ul>
@@ -46,32 +46,51 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-7 col-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="widget widget-subcribe">
                         <div class="widget-social style-1 mg-t32">
                             <ul>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                
-                                <li class="style-2"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                <li class="mgr-none"><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-telegram"></a></li>
+                                <li><a href="#" class="fa fa-youtube"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer><!-- /#footer -->
+    </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-    data: {
-
-    },
-    methods: {
-        
+  computed: mapState([
+    'isModalOpen',
+    'account',
+    'wrongChainId',
+    'totalSupply',
+    'minting'
+  ]),
+  methods: {
+    showModal (data) {
+      this.$store.commit('SET_MODAL', true)
+      this.$store.commit('SET_CURRENT_MODAL', data)
     }
+  }
 }
 </script>
+
+<style>
+    .my-dino-margin {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .card {
+      margin-bottom:50px!important
+    }
+</style>

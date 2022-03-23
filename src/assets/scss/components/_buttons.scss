@@ -18,8 +18,9 @@
 
 .element-box-inner {
     button {
-        background-color: $button-bg-color-purple;
-        border:  2px solid $button-border-color;
+
+        background-color: $button-bg-color;
+        border:  3px solid white;
         border-radius: 40px;
         padding: 10px 80px;
         margin: 0px 0px 0px 0px;
@@ -28,14 +29,16 @@
         font-size: 30px;
         font-family: $font;
         font-weight: bold;
-        color: $white;
+        color: white;
+
         cursor: pointer;
     }
 
     button:hover {
-      border:  3px solid #5142FC;
-      background-color: $white;
-      color: $font-color-hover;
+      border:  3px solid white;
+      background-color: white;
+      color: $button-bg-color;
+      font-weight: bold;
     }
     
     button:disabled {
@@ -46,16 +49,17 @@
 
 .connect-box {
     button {
+
         padding: 8px 35px 8px 32px;
         background: transparent none repeat scroll 0 0;
         border:  2px solid #5142FC;
+
         border-radius: 40px;
         font-family: $font;
         color: #fff;
         font-weight: 600;
         font-size: 24px;
         cursor: pointer;
-        transition: all 0.3s ease;
 
     }
     button:hover {
